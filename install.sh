@@ -16,7 +16,7 @@ chmod +x ~/.local/bin/OpenCloud.AppImage
 cat > ~/.local/share/applications/opencloud.desktop <<DESKTOP
 [Desktop Entry]
 Name=OpenCloud
-Exec=/home/$USER/.local/bin/OpenCloud.AppImage
+Exec=%h/.local/bin/OpenCloud.AppImage
 Type=Application
 Terminal=false
 DESKTOP
