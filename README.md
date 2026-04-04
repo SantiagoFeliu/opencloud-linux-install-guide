@@ -5,6 +5,7 @@ Es instalación real, ejecución por consola y control.
 
 ## Uso
 
+```bash
 chmod +x install.sh start.sh stop.sh check.sh uninstall.sh
 ./install.sh
 ./start.sh
