@@ -1,13 +1,10 @@
 name: Tests
-
 on:
   pull_request:
   push:
     branches: [main]
-
 permissions:
   contents: read
-
 jobs:
   process-check:
     runs-on: ubuntu-latest
@@ -19,3 +16,4 @@ jobs:
         run: find . -type f -name '*.sh' -not -path './.git/*' -print0 | xargs -0 -r shellcheck
       - run: bash -n check.sh tests/test_check.sh
       - run: bash tests/test_check.sh
+      - run: bash tests/test_scripts.sh
