@@ -14,4 +14,14 @@ cp install.sh "$tmp/"
   fi
   grep -q "Falta AppImage" "$tmp/output"
 )
-echo "PASS: syntax and missing-AppImage behavior"
+(
+  cd "$tmp"
+  mkdir -p "$tmp/home"
+  printf '#!/bin/sh\nexit 0\n' > OpenCloud.AppImage
+  HOME="$tmp/home" bash install.sh
+  test -x "$tmp/home/.local/bin/OpenCloud.AppImage"
+  grep -Fx "Exec=$tmp/home/.local/bin/OpenCloud.AppImage" "$tmp/home/.local/share/applications/opencloud.desktop"
+  HOME="$tmp/home" bash install.sh
+  test -x "$tmp/home/.local/bin/OpenCloud.AppImage"
+)
+echo "PASS: syntax, missing AppImage, install and reinstall"
