@@ -1,5 +1,7 @@
 # OpenCloud Desktop on Linux
 
+[![Tests](https://github.com/SantiagoFeliu/opencloud-linux-install-guide/actions/workflows/tests.yml/badge.svg)](https://github.com/SantiagoFeliu/opencloud-linux-install-guide/actions/workflows/tests.yml)
+
 OpenCloud Desktop en Linux (cliente).
 No instala servidor.
 
